@@ -1,0 +1,165 @@
+{
+  "metadata": {
+    "title": "Life Event Data Standard",
+    "version": "0.1",
+    "status": "draft",
+    "effectiveDate": "2026-02-16",
+    "description": "Standardised data fields for describing an event that has occurred in a person's life."
+  },
+  "entities": [
+    {
+      "name": "Event",
+      "description": "The event that has occurred.",
+      "fields": [
+        {
+          "name": "Identifier",
+          "type": "Object",
+          "cardinality": "1..*",
+          "description": "Unique identifiers (IDs) associated with the event.",
+          "children": [
+            {
+              "name": "value",
+              "type": "String",
+              "cardinality": "1..1",
+              "description": "A single unique identifier attached to the event (e.g., ?)."
+            },
+            {
+              "name": "system",
+              "type": "URI",
+              "cardinality": "1..1",
+              "description": "System that the identifier adheres to (e.g., ?)."
+            }
+          ]
+        },
+        {
+          "name": "Type",
+          "type": "Code",
+          "cardinality": "1..*",
+          "description": "Code for the type of the event (e.g. domestic violence incident).",
+          "vocabulary": {
+            "name": "EventCode",
+            "url": "/#"
+          }
+        },
+        {
+          "name": "Risk",
+          "type": "Code",
+          "cardinality": "0..*",
+          "description": "Code for the risk level of the event (?).",
+          "vocabulary": {
+            "name": "RiskCode",
+            "url": "/#"
+          }
+        },
+        {
+          "name": "SubjectPerson",
+          "type": "Object",
+          "cardinality": "1..*",
+          "description": "References to Person(s) involved in the event.",
+          "children": [
+            {
+              "name": "ref",
+              "type": "Link",
+              "cardinality": "1..1",
+              "description": "A reference (pointer?) to a Person record involved in the event."
+            },
+            {
+              "name": "involvement",
+              "type": "Code",
+              "cardinality": "1..1",
+              "description": "Code for the nature of the Person's involvement in the event.",
+              "vocabulary": {
+                "name": "PersonInvolvementEventCode",
+                "url": "/#"
+              }
+            }
+          ]
+        },
+        {
+          "name": "RelatedProfessional",
+          "type": "Object",
+          "cardinality": "0..*",
+          "description": "References to Professional(s) involved in the event.",
+          "children": [
+            {
+              "name": "ref",
+              "type": "Link",
+              "cardinality": "1..1",
+              "description": "A reference (pointer?) to a Professional record involved in the event."
+            },
+            {
+              "name": "involvement",
+              "type": "Code",
+              "cardinality": "1..1",
+              "description": "Code for the nature of the Person's involvement in the event.",
+              "vocabulary": {
+                "name": "ProfessionalInvolvementEventCode",
+                "url": "/#"
+              }
+            }
+          ]
+        },
+        {
+          "name": "RelatedService",
+          "type": "Object",
+          "cardinality": "0..*",
+          "description": "References to Service(s) involved in the event.",
+          "children": [
+            {
+              "name": "ref",
+              "type": "Link",
+              "cardinality": "1..1",
+              "description": "A reference (pointer?) to a Service record involved in the event."
+            },
+            {
+              "name": "involvement",
+              "type": "Code",
+              "cardinality": "1..1",
+              "description": "Code for the nature of the Person's involvement in the event.",
+              "vocabulary": {
+                "name": "ServiceInvolvementEventCode",
+                "url": "/#"
+              }
+            }
+          ]
+        },
+        {
+          "name": "TimeInformation",
+          "type": "Object",
+          "cardinality": "0..*",
+          "description": "Details about timing of the event",
+          "children": [
+            {
+              "name": "startDateTime",
+              "type": "DateTime",
+              "cardinality": "1..1",
+              "description": "DateTime (ISO-8601) for start of the event."
+            },
+            {
+              "name": "endDateTime",
+              "type": "DateTime",
+              "cardinality": "0..1",
+              "description": "DateTime (ISO-8601) for end of the event."
+            },
+            {
+              "name": "expectedFrequency",
+              "type": "Code",
+              "cardinality": "0..1",
+              "description": "Expected frequency of the event.",
+              "vocabulary": {
+                "name": "FrequencyCode",
+                "url": "/#"
+              }
+            }
+          ]
+        },
+        {
+          "name": "LocationInformation",
+          "type": "String",
+          "cardinality": "0..*",
+          "description": "Details about the location of the event"
+        }
+      ]
+    }
+  ]
+}
