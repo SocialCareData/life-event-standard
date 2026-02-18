@@ -38,7 +38,7 @@
           "description": "Code for the type of the event (e.g. domestic violence incident).",
           "vocabulary": {
             "name": "EventCode",
-            "url": "/#"
+            "url": "#"
           }
         },
         {
@@ -48,7 +48,7 @@
           "description": "Code for the risk level of the event (?).",
           "vocabulary": {
             "name": "RiskCode",
-            "url": "/#"
+            "url": "#"
           }
         },
         {
@@ -70,7 +70,7 @@
               "description": "Code for the nature of the Person's involvement in the event.",
               "vocabulary": {
                 "name": "PersonInvolvementEventCode",
-                "url": "/#"
+                "url": "#"
               }
             }
           ]
@@ -94,7 +94,7 @@
               "description": "Code for the nature of the Person's involvement in the event.",
               "vocabulary": {
                 "name": "ProfessionalInvolvementEventCode",
-                "url": "/#"
+                "url": "#"
               }
             }
           ]
@@ -118,7 +118,7 @@
               "description": "Code for the nature of the Person's involvement in the event.",
               "vocabulary": {
                 "name": "ServiceInvolvementEventCode",
-                "url": "/#"
+                "url": "#"
               }
             }
           ]
@@ -148,7 +148,7 @@
               "description": "Expected frequency of the event.",
               "vocabulary": {
                 "name": "FrequencyCode",
-                "url": "/#"
+                "url": "#"
               }
             }
           ]
