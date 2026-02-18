@@ -61,7 +61,7 @@
               "name": "ref",
               "type": "Link",
               "cardinality": "1..1",
-              "description": "A reference (pointer?) to a Person record involved in the event."
+              "description": "A reference to a Person record involved in the event."
             },
             {
               "name": "involvement",
@@ -85,7 +85,7 @@
               "name": "ref",
               "type": "Link",
               "cardinality": "1..1",
-              "description": "A reference (pointer?) to a Professional record involved in the event."
+              "description": "A reference to a Professional record involved in the event."
             },
             {
               "name": "involvement",
@@ -109,7 +109,7 @@
               "name": "ref",
               "type": "Link",
               "cardinality": "1..1",
-              "description": "A reference (pointer?) to a Service record involved in the event."
+              "description": "A reference to a Service record involved in the event."
             },
             {
               "name": "involvement",
