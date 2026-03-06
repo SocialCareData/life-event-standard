@@ -42,16 +42,6 @@
           }
         },
         {
-          "name": "Risk",
-          "type": "Code",
-          "cardinality": "0..*",
-          "description": "Code for the risk level of the life event (?).",
-          "vocabulary": {
-            "name": "RiskCode",
-            "url": "#"
-          }
-        },
-        {
           "name": "SubjectPerson",
           "type": "Object",
           "cardinality": "1..*",
@@ -132,10 +122,10 @@
               "description": "DateTime (ISO-8601) for end of the life event."
             },
             {
-              "name": "expectedFrequency",
+              "name": "frequency",
               "type": "Code",
               "cardinality": "0..1",
-              "description": "Expected frequency of the life event.",
+              "description": "Frequency of the life event (incl. whether spontaneous or not).",
               "vocabulary": {
                 "name": "FrequencyCode",
                 "url": "#"
