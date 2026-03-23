@@ -59,8 +59,8 @@
               "cardinality": "1..1",
               "description": "Code for the nature of the Person's involvement in the life event.",
               "vocabulary": {
-                "name": "PersonInvolvementCode",
-                "url": "#"
+                "name": "InvolvementCode",
+                "url": "https://terminology.hl7.org/5.2.0/CodeSystem-v3-ParticipationType.html"
               }
             }
           ]
@@ -83,8 +83,8 @@
               "cardinality": "1..1",
               "description": "Code for the nature of the Person's involvement in the life event.",
               "vocabulary": {
-                "name": "ProfessionalInvolvementCode",
-                "url": "#"
+                "name": "InvolvementCode",
+                "url": "https://terminology.hl7.org/5.2.0/CodeSystem-v3-ParticipationType.html"
               }
             }
           ]
@@ -128,7 +128,7 @@
               "description": "Frequency of the life event (incl. whether spontaneous or not).",
               "vocabulary": {
                 "name": "FrequencyCode",
-                "url": "#"
+                "url": "https://browser.ihtsdotools.org/?perspective=full&conceptId1=272123002&edition=MAIN/2026-03-01&release=&languages=en"
               }
             }
           ]
