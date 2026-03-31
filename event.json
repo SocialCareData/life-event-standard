@@ -38,7 +38,7 @@
           "description": "Code for the type of the life event (e.g. birth, death).",
           "vocabulary": {
             "name": "EventCode",
-            "url": "#"
+            "url": "https://socialcaredata.github.io/todo.html"
           }
         },
         {
